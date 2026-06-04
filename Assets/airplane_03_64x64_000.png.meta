@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 25e44e2bed55ea34bb33e0f0c63ac21c
+guid: dd20da8fd861ee844b0e2665d49a9fe5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3803887304354961441
-    second: unitytut-birdbody_0
+      213: -5873832280187072247
+    second: airplane_03_64x64_000_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: unitytut-birdbody_0
+      name: airplane_03_64x64_000_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 446
-        height: 520
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd7ed4a86a0e53bc0800000000000000
-      internalID: -3803887304354961441
+      spriteID: 9011a3d79a4fb7ea0800000000000000
+      internalID: -5873832280187072247
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      unitytut-birdbody_0: -3803887304354961441
+      airplane_03_64x64_000_0: -5873832280187072247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,11 +9,11 @@ public class FighterScript : MonoBehaviour
     {
         float move = 0;
 
-        if (Input.GetKey(KeyCode.RightArrow) && (transform.position.x < 3.41))
+        if (Input.GetKey(KeyCode.RightArrow) && (transform.position.x < 3.25))
         {
             move = 1;
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && (transform.position.x > -3.41))
+        if (Input.GetKey(KeyCode.LeftArrow) && (transform.position.x > -3.25))
         {
             move = -1;
         }
