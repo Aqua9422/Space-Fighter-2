@@ -7,7 +7,14 @@ public class LogicScript : MonoBehaviour
 {
     public int playerScore;
     public Text scoreText;
-    private int scoreToAdd = 10;
+
+    [ContextMenu("Add Score")]
+    public void addScore()
+    {
+        playerScore += 100;
+        scoreText.text = playerScore.ToString();
+    }
+
 
 
 }
