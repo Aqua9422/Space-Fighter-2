@@ -6,7 +6,12 @@ public class SchussMoveScript : MonoBehaviour
     public float Deadzone = 4f;
     private float pos = 0;
     private float mult = 0.5f;
+    public LogicScript logic;
 
+    void Start()
+    {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+    }
     void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
@@ -19,6 +24,16 @@ public class SchussMoveScript : MonoBehaviour
 
         
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            logic.addScore();
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
 

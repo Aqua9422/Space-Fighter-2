@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 787543048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 13.47, y: -2.97, z: 10}
   m_LocalScale: {x: 1.51, y: 1.51, z: 1.51}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -934,7 +934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &1966146427
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1046,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1050258844700106425, guid: 238ade6577b66cf4da3bbb1b64bd1d12, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5443758755372304714, guid: 238ade6577b66cf4da3bbb1b64bd1d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09
@@ -1099,6 +1103,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 555690082010514675, guid: 39a7803970328f34abfd88e89a9bf4fb, type: 3}
+      propertyPath: logic
+      value: 
+      objectReference: {fileID: 865993159}
     - target: {fileID: 6181256513269606703, guid: 39a7803970328f34abfd88e89a9bf4fb, type: 3}
       propertyPath: m_Name
       value: Schuss
