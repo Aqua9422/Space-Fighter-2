@@ -3,7 +3,7 @@ using UnityEngine;
 public class SchussMoveScript : MonoBehaviour
 {
     public float speed = 5f;
-    public float Deadzone = 4f;
+    public float Deadzone = 6f;
     private float pos = 0;
     private float mult = 0.5f;
     public LogicScript logic;
@@ -15,9 +15,9 @@ public class SchussMoveScript : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
-        pos += speed * Time.deltaTime * mult;
+        
 
-        if (pos > Deadzone)
+        if (transform.position.y > Deadzone)
         {
             Destroy(gameObject);
         }
