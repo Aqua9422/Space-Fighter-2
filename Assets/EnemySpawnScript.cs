@@ -23,7 +23,7 @@ public class EnemySpawnScript : MonoBehaviour
         else
         {
             spawnEnemy();
-            spawnEnemy();
+            
             timer = 0;
         }
 

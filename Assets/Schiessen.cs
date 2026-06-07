@@ -34,6 +34,12 @@ public class SchussMoveScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Enemy2")
+        {
+            logic.addScore();
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
 
