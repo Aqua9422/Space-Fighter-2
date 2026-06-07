@@ -11,7 +11,7 @@ public class Enemy2Script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int right = Random.Range(-1, 2);
+        int right = Random.Range(0, 2);
     }
 
     // Update is called once per frame

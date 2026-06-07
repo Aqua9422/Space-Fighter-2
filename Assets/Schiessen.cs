@@ -4,8 +4,8 @@ public class SchussMoveScript : MonoBehaviour
 {
     public float speed = 5f;
     public float Deadzone = 6f;
-    private float pos = 0;
-    private float mult = 0.5f;
+    //private float pos = 0;
+    //private float mult = 0.5f;
     public LogicScript logic;
 
     void Start()

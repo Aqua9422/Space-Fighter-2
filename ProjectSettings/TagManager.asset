@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Logic
   - Border
+  - Fighter
   layers:
   - Default
   - TransparentFX
