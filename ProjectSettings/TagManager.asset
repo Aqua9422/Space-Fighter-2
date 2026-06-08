@@ -9,6 +9,7 @@ TagManager:
   - Logic
   - Border
   - Fighter
+  - SchussGegner
   layers:
   - Default
   - TransparentFX

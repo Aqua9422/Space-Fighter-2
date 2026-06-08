@@ -40,6 +40,12 @@ public class SchussMoveScript : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "SchussGegner")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+            
     }
 }
 

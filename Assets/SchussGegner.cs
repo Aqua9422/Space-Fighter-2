@@ -27,10 +27,7 @@ public class SchussGegner : MonoBehaviour
 
         if (collision.gameObject.tag == "Fighter")
         {
-            logic.leben();
-            if (lives == 0)
-                Destroy(gameObject);
-                Destroy(collision.gameObject);
+            
         }
         if (collision.gameObject.tag == "Schuss")
         {
@@ -38,5 +35,6 @@ public class SchussGegner : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+
     }
 }
