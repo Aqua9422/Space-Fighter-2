@@ -27,7 +27,8 @@ public class SchussGegner : MonoBehaviour
 
         if (collision.gameObject.tag == "Fighter")
         {
-            
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Schuss")
         {
