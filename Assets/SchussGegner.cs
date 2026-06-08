@@ -4,10 +4,11 @@ public class SchussGegner : MonoBehaviour
 {
     public float speed = 5f;
     public float Deadzone = -6f;
+    public LogicScript logic;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -26,9 +27,10 @@ public class SchussGegner : MonoBehaviour
 
         if (collision.gameObject.tag == "Fighter")
         {
-            logic.addScore();
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            logic.leben();
+            if (lives == 0)
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Schuss")
         {
