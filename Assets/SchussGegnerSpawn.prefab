@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3754198900426107949}
   m_Layer: 0
   m_Name: SchussGegnerSpawn
-  m_TagString: Untagged
+  m_TagString: SchussGegner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc1de9990644cd4f963bfc014b30ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SchussGegnerSpawnScript
-  Schuss: {fileID: 3183651710226154778, guid: b33c439322ad7534db244df1d0d599a3, type: 3}
+  Schuss: {fileID: 8586155185952303381, guid: 05e94a64226b4ad4e9dff952ac9c9c7f, type: 3}
   spawnInterval: 2
