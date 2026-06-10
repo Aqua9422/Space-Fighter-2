@@ -20,4 +20,13 @@ public class FighterScript : MonoBehaviour
 
         transform.position += Vector3.right * move * speed * Time.deltaTime;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Hit: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "SchussGegner")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
+    }  
 }

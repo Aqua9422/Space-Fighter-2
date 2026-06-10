@@ -11,7 +11,7 @@ public class Enemy2Script : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int right = Random.Range(0, 2);
+        int right = Random.Range(0, 3);
     }
 
     // Update is called once per frame
@@ -19,12 +19,12 @@ public class Enemy2Script : MonoBehaviour
     {
         transform.position += Vector3.down * speed * Time.deltaTime;
         if (transform.position.x >= 3.25)
-            right = 0;
+            right = 2;
         if (transform.position.x <= -3.25)
             right = 1;
         if ((transform.position.x < 3.25) && (right == 1))
                 transform.position += Vector3.right * speed * Time.deltaTime;
-        if ((transform.position.x > -3.25) && (right == 0))
+        if ((transform.position.x > -3.25) && (right == 2))
                 transform.position += Vector3.left * speed * Time.deltaTime;
 
         if (transform.position.y < Deadzone)

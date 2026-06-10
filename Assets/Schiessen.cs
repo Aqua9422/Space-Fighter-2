@@ -15,37 +15,32 @@ public class SchussMoveScript : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * speed * Time.deltaTime;
-        
+
 
         if (transform.position.y > Deadzone)
         {
             Destroy(gameObject);
         }
 
-        
+
 
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("💥 Getroffen: " + collision.gameObject.name + " | Tag: " + collision.tag);
 
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Enemy2"))
         {
             logic.addScore();
-            Destroy(gameObject);
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Enemy2")
+        else if (collision.CompareTag("SchussGegner"))
         {
-            logic.addScore();
-            Destroy(gameObject);
             Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "SchussGegner")
-        {
             Destroy(gameObject);
-            Destroy(collision.gameObject);
         }
-            
     }
 }
 

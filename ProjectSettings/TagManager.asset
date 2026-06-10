@@ -10,6 +10,7 @@ TagManager:
   - Border
   - Fighter
   - SchussGegner
+  - Enemy2
   layers:
   - Default
   - TransparentFX
