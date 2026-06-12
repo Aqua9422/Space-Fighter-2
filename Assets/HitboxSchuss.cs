@@ -21,7 +21,7 @@ public class HitboxSchuss : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            logic.addScore();
+            logic.addScore(100);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

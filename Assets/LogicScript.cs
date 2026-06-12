@@ -10,9 +10,9 @@ public class LogicScript : MonoBehaviour
     public Text lebenText;
     public int lives = 3;
 
-    public void addScore()
+    public void addScore(int ScoreToAdd)
     {
-        playerScore += 100;
+        playerScore += ScoreToAdd;
         scoreText.text = playerScore.ToString();
     }
     public void leben()

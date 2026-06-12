@@ -1,9 +1,17 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
 public class FighterScript : MonoBehaviour
 {
     public float speed = 5;
+    public int hearts = 3;
+    public HealthUI healthUI;
+
+    void Start()
+    {
+        healthUI.UpdateHearts(hearts);
+    }
 
     void Update()
     {
@@ -20,13 +28,16 @@ public class FighterScript : MonoBehaviour
 
         transform.position += Vector3.right * move * speed * Time.deltaTime;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit: " + collision.gameObject.name);
-        if (collision.gameObject.tag == "SchussGegner")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy2" || collision.gameObject.tag == "SchussGegner")
         {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            hearts -= 1;
+            healthUI.UpdateHearts(hearts);
+            if (hearts <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
-    }  
+    }
 }

@@ -28,17 +28,24 @@ public class SchussMoveScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("💥 Getroffen: " + collision.gameObject.name + " | Tag: " + collision.tag);
+        
 
         if (collision.CompareTag("Enemy") || collision.CompareTag("Enemy2"))
         {
-            logic.addScore();
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            if (collision.CompareTag("Enemy"))
+            {
+                logic.addScore(100);
+            }
+            else if (collision.CompareTag("Enemy2"))
+            {
+                logic.addScore(200);
+            }
         }
         else if (collision.CompareTag("SchussGegner"))
         {
-            Destroy(collision.gameObject);
+            
             Destroy(gameObject);
         }
     }
