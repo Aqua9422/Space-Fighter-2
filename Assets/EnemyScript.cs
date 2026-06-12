@@ -4,6 +4,8 @@ public class EnemyScript : MonoBehaviour
 {
     public float speed = 0.5f;
     public float Deadzone = -6;
+    public int hearts = 3;
+    public HealthUI healthUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +20,8 @@ public class EnemyScript : MonoBehaviour
 
         if (transform.position.y < Deadzone)
         {
+            hearts--;
+            healthUI.UpdateHearts(hearts);
             Destroy(gameObject);
         }
     }

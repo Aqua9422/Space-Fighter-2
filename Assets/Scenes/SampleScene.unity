@@ -243,9 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Enemy: {fileID: 174432290552983516, guid: 238ade6577b66cf4da3bbb1b64bd1d12, type: 3}
-  spawnRate: 2
+  spawnRate: 4
   Offset: 3
-  schwierigkeit: 10
+  schwierigkeit: 5
 --- !u!4 &391071995
 Transform:
   m_ObjectHideFlags: 0
@@ -522,6 +522,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
   speed: 0.00001
   Deadzone: -6
+  hearts: 3
+  healthUI: {fileID: 0}
 --- !u!58 &581974390
 CircleCollider2D:
   m_ObjectHideFlags: 0
