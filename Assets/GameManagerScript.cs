@@ -33,6 +33,14 @@ public class GameManager : MonoBehaviour
         UpdateHighscoreUI();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
+    }
+
     // ▶️ Spiel starten
     public void StartGame()
     {
@@ -107,5 +115,10 @@ public class GameManager : MonoBehaviour
 
         highscoreText.text = "Highscore: " + highscore;
         homeHighscore.text = "Highscore: " + highscore;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
