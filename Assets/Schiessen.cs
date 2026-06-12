@@ -36,11 +36,11 @@ public class SchussMoveScript : MonoBehaviour
             Destroy(gameObject);
             if (collision.CompareTag("Enemy"))
             {
-                logic.addScore(100);
+                GameManager.instance.AddScore(100);
             }
             else if (collision.CompareTag("Enemy2"))
             {
-                logic.addScore(200);
+                GameManager.instance.AddScore(200);
             }
         }
         else if (collision.CompareTag("SchussGegner"))
@@ -50,4 +50,3 @@ public class SchussMoveScript : MonoBehaviour
         }
     }
 }
-

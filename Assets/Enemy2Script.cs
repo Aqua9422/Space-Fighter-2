@@ -29,8 +29,9 @@ public class Enemy2Script : MonoBehaviour
 
         if (transform.position.y < Deadzone)
         {
+            GameManager.instance.TakeDamage(1);
             Destroy(gameObject);
         }
     }
-    
+   
 }

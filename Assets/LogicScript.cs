@@ -2,6 +2,7 @@ using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
@@ -15,10 +16,5 @@ public class LogicScript : MonoBehaviour
         playerScore += ScoreToAdd;
         scoreText.text = playerScore.ToString();
     }
-    public void leben()
-    {
-        lives -= 1;
-        lebenText.text = lives.ToString();
-    }
-
+    
 }

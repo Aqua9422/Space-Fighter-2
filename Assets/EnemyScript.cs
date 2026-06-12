@@ -10,7 +10,7 @@ public class EnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        healthUI = FindAnyObjectByType<HealthUI>();
     }
 
     // Update is called once per frame
@@ -20,10 +20,12 @@ public class EnemyScript : MonoBehaviour
 
         if (transform.position.y < Deadzone)
         {
-            hearts--;
-            healthUI.UpdateHearts(hearts);
+            GameManager.instance.TakeDamage(1);
             Destroy(gameObject);
         }
     }
+
     
+
+
 }
